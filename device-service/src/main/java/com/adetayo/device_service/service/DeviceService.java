@@ -6,6 +6,8 @@ import com.adetayo.device_service.exception.DeviceNotFoundException;
 import com.adetayo.device_service.repository.DeviceRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class DeviceService {
@@ -56,6 +58,12 @@ public class DeviceService {
 
         deviceRepository.deleteById(id);
 
+    }
+
+    public List<DeviceDto> getAllDevicesByUserId(Long userId){
+        List<Device> devices = deviceRepository.findAllByUserId(userId);
+        return devices.stream().map(this::mapToDto)
+                .toList();
     }
 
     private DeviceDto mapToDto(Device device) {

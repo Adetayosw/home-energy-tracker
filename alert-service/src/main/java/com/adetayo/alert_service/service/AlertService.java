@@ -19,7 +19,7 @@ public class AlertService {
     public void energyUsageAlertEvent(AlertingEvent alertingEvent){
         log.info("Recieved alert event:{}", alertingEvent);
 
-        final String subject = "Enerfy Usage Alert for User " +
+        final String subject = "Energy Usage Alert for User " +
                 alertingEvent.userId();
         final String message = "Alert: " + alertingEvent.message()
                 +"\nThreshold: " + alertingEvent.threshold() +

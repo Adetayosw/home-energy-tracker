@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class DeviceEnergy {
     private Long deviceId;
     private double energyConsumed;
-    private Long UserId;
+    private Long userId;
 }

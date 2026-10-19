@@ -30,7 +30,7 @@ class UserServiceApplicationTests {
 			User user = User.builder()
 					.name("User" + i)
 					.surname("Surname" + i)
-					.email("email" + i)
+					.email("email" + i + "@mail.com")
 					.address("address" + i)
 					.alerting(i % 2 == 0)
 					.energyAlertingThreshold(1000.0 + i)
